@@ -198,7 +198,9 @@
         color: black;
         }
 
-
+        #aviso {
+            display: none;
+        }
 
         
        @media (max-width: 768px) {
@@ -246,8 +248,36 @@
         }
         
 
-                
+
+        #aviso {
+                display: block;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            #aviso a {
+                color: #fff;
+                text-decoration: underline;
+            }
+
+            #aviso button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
         }
+                
+        
 
 
 /*sotkc 0*/
@@ -378,7 +408,7 @@
             </div>
             
             <div class="card">
-                <a href="URL_DEL_SITIO_AL_QUE_DESEA_REDIRECCIONAR" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.link/0m25jh" target="_blank" rel="noopener noreferrer">
                 <h4>HOCH SPORT Whey Protein 1Kg (chocolate,dulce de leche,frutos rojos,mango citric,vainilla)</h4>
                 <img src="imagenes/proteeina hoch.png" alt="Suplemento 1">
                 <p>Precio: $9,685</p>
@@ -577,5 +607,27 @@
     
            
         </div> </a>
+
+
+        <div id="aviso">
+            <p>Manten precionado el producto para saber si esta disponible. <a href="enlace.html">...</a></p>
+            <button onclick="aceptarAviso()">Entendido</button>
+        </div>
+        
+        <script>
+            // JavaScript para mostrar/ocultar el aviso
+            function aceptarAviso() {
+                document.getElementById('aviso').style.display = 'none';
+                // Aquí puedes agregar lógica adicional al aceptar el aviso
+            }
+        
+            // Mostrar el aviso al cargar la página (puedes ajustar según tus necesidades)
+            window.onload = function () {
+                // Verificar el ancho de la pantalla y mostrar el aviso solo en pantallas pequeñas
+                if (window.innerWidth <= 600) {
+                    document.getElementById('aviso').style.display = 'block';
+                }
+            };
+        </script>
 </body>
 </html>
